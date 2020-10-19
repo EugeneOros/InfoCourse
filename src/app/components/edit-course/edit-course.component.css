@@ -1,0 +1,48 @@
+.editCard {
+  font-size: 20px;
+  color: #143D59;
+  background-color: #F5B41A;
+  border-bottom: 3px solid #143D59;
+  border-right: 3px solid #143D59;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+
+.editBtn {
+  color: #f5d300;
+  background-color: #143D59;
+}
+
+.editBtn:hover {
+  background-color: rgb(15, 73, 112);
+}
+
+.editBtn:active {
+  background-color: rgb(10, 99, 158);
+}
+
+.rate {
+  cursor: pointer;
+}
+
+.warningText {
+  font-size: 10px;
+  color: #f22;
+}
+
+.editField {
+  display: flex;
+  align-items: center;
+
+}
+
+.card-text {
+  width: 100%;
+
+  font-weight: 10px;
+}
+
+.errorText {
+  color: #ff2040;
+  font-size: 13px;
+}

@@ -1,0 +1,43 @@
+.courseItem {
+  color: #143D59;
+  border: 0px solid #F5B41A;
+  border-bottom: 3px solid rgb(93, 103, 110);
+  border-right: 3px solid #143D59;
+  border-radius: 5px;
+}
+
+#formGroup {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.form-control {
+  margin-right: 10px;
+}
+
+.courseList {
+  padding: 15px;
+  border-radius: 1px;
+}
+
+.courseList :hover {
+  color: #143D59;
+  background-color: rgba(16, 55, 82, 0.103);
+
+}
+
+/* .courseList :active {
+  color: #F5B41A;
+  background-color: #143D59;
+} */
+
+
+
+.oddtest {
+  background-color: #F8b401;
+}
+
+.eventest {
+  background-color: #f5d300;
+}

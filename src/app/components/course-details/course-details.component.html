@@ -1,0 +1,29 @@
+<div #card class="mt-4 card text-center col-10 offset-1 col-md-8 offset-md-2 detailsCard" *ngIf="course != null">
+  <div>
+    <h1>{{course.name}}</h1>
+    <br>
+    <br>
+    <p class="card-text">Numer semestru {{course.semestr}} </p>
+    <br>
+    <p class="card-text">Numer punktów ETCS: {{course.ECTS}}</p>
+    <br>
+    <p class="card-text">Maksymalna ilość studentów: {{course.maxQuantity}}</p>
+    <br>
+    <p class="card-text">Forma(y) zajęc: {{course.formsOfClass}}</p>
+    <br>
+    <br>
+    <!-- <p #ratemessage class="card-text">Course rate:</p> -->
+    <app-rate class="rate" (changeCourseRate)="changeCourseRate($event)" (addRatePart)="addRatePart($event)"
+      [generalRate]="course.rating" [rateList]="course.rateList">
+    </app-rate>
+    <br>
+    <button *ngIf="user" class="btn enrollMeBtn" (click)="onEnrollMe()"> Zapisz mnie </button>
+    <p *ngIf="isParticipant()" class="isPartText">Jesteś zapisany</p>
+    <p *ngIf="noPlaces()" class="noPlacesText"> Nie ma wolnego miejsca </p>
+    <div *ngIf="!user" class="warningText">
+      <p>Jesteś nie zalogowany.</p>
+      <p> Żeby zapisać się na kurs lub zagłosować trzeba zalogować się</p>
+    </div>
+    <button *ngIf="isAdmin()" class="btn editBtn" (click)="onEdit()"> Edytuj </button>
+  </div>
+</div>

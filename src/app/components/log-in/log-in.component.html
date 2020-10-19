@@ -1,0 +1,26 @@
+<div class="logInCard  flex-md-row col-10 offset-1  col-md-8 offset-md-2 ">
+
+  <div class="logInIcon flex-sm-row">
+    <h1>Log in</h1>
+    <img src="../../../assets/img/log-in.png" alt="" style="width: 75px; height: 75px;">
+  </div>
+
+  <form class="form-logIn " (ngSubmit)="loginUser()">
+    <div class="alert-danger text-center" *ngIf="isError()">
+      {{errorMessage}}
+    </div>
+    <div>
+      <label for="inputEmail">Email</label>
+      <input [(ngModel)]="email" name="email" id="inputEmail" type="email" placeholder="your email" required
+        class="form-control" />
+    </div>
+    <div>
+      <label for="inputPassword">Hasło</label>
+      <input [(ngModel)]="password" name="password" id="inputPassword" type="password" placeholder="password"
+        class="form-control" required />
+    </div>
+
+    <br>
+    <button type="submit" class="btn logInSubmit">log in</button>
+  </form>
+</div>

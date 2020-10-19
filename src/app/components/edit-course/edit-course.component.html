@@ -1,0 +1,41 @@
+<div #card class="mt-4 card text-center col-10 offset-1 col-md-8 offset-md-2 editCard" *ngIf="course != null">
+  <div>
+    <form [formGroup]="editForm" id="addForm" onsubmit="return false" autocomplete="off">
+      <div class="errorText" [style.display]="displayErrorText()">nie wszystkie pola zostały wypełnione poprawnie</div>
+      <br>
+      <div class="form-group editField">
+        <label class="card-text" for="inputName">Nazwa</label>
+        <input formControlName="name" type="text" class="form-control" id="inputName" value="{{course.name}}">
+      </div>
+      <br>
+      <div class="form-group editField">
+        <label class="card-text" for="inputECTS">Maksymalna ilość punktów ECTS</label>
+        <input formControlName="ects" type="text" class="form-control" id="inputECTS" value="{{course.ECTS}}">
+      </div>
+      <br>
+      <div class="form-group editField">
+        <label class="card-text" for="inputSemestr">Numer semesteru</label>
+        <input formControlName="semestr" type="text" class="form-control" id="inputSemestr" value="{{course.semestr}}">
+      </div>
+      <br>
+      <div class="form-group editField">
+        <label class="card-text" for="inputForm">Formy szkolenia (W,C,L,P) </label>
+        <input formControlName="form" type="text" class="form-control" id="inputForm"
+          value="{{course.formsOfClass.toString()}}">
+      </div>
+      <br>
+      <div class="form-group editField">
+        <label class="card-text" for="quantity">Maksymalna ilość studentów: </label>
+        <input formControlName="quantity" type="text" class="form-control" id="inputQuantity"
+          value="{{course.maxQuantity}}">
+      </div>
+      <br>
+      <div class="form-group editField">
+        <label class="card-text" for="inputImg ">Zdjęcie</label>
+        <input formControlName="img" type="text" class="form-control" id="inputImg" value="{{course.imgPath}}">
+      </div>
+      <br>
+      <button class="btn editBtn" (click)="onEdit()">Edutuj</button>
+    </form>
+  </div>
+</div>

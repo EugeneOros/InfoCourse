@@ -1,0 +1,28 @@
+<div class="signUpCard  flex-md-row col-10 offset-1  col-md-8 offset-md-2 ">
+  <div class="signUpIcon  flex-sm-row">
+    <h1 class="signUpText">Sign up</h1>
+    <img src="../../../assets/img/log-in.png" alt="" style="width: 75px; height: 75px;">
+  </div>
+
+  <form class="form-signUp" (ngSubmit)="signupUser()">
+    <div>
+      <label for="inputUserName">Imię</label>
+      <input [(ngModel)]="userName" name="userName" id="inputUserName" type="text" placeholder="name"
+        class="form-control" required />
+      <label for="inputUserSurname">Nazwisko</label>
+      <input [(ngModel)]="userSurname" name="userSurname" id="inputUserSurname" type="text" placeholder="surname"
+        class="form-control" required />
+      <label for="inputEmail">Email</label>
+      <input [(ngModel)]="email" name="email" id="inputEmail" type="email" placeholder="your email" required
+        class="form-control" />
+    </div>
+    <div>
+      <label for="inputPassword">Hasło</label>
+      <input [(ngModel)]="password" name="password" id="inputPassword" type="password" placeholder="password"
+        class="form-control" required />
+    </div>
+
+    <br>
+    <button type="submit" class="btn signUpSubmit">sign up</button>
+  </form>
+</div>

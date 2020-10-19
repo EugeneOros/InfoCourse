@@ -1,0 +1,58 @@
+.detailsCard {
+  font-size: 20px;
+  color: #143D59;
+  background-color: #F5B41A;
+  border-bottom: 3px solid #143D59;
+  border-right: 3px solid #143D59;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+
+.enrollMeBtn {
+  color: #f5d300;
+  background-color: #143D59;
+}
+
+.enrollMeBtn:hover {
+  background-color: rgb(15, 73, 112);
+}
+
+.enrollMeBtn:active {
+  background-color: rgb(10, 99, 158);
+}
+
+.editBtn {
+  margin-left: 10px;
+  color: #f5d300;
+  background-color: #143D59;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.editBtn:hover {
+  background-color: rgb(15, 73, 112);
+}
+
+.editBtn:active {
+  background-color: rgb(10, 99, 158);
+}
+
+.rate {
+  cursor: pointer;
+}
+
+.warningText {
+  font-size: 10px;
+  color: #f22;
+}
+
+.isPartText {
+  font-size: 10px;
+  color: #492;
+}
+
+.noPlacesText {
+  font-size: 10px;
+  color: #f22;
+}

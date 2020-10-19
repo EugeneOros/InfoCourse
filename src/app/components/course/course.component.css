@@ -1,0 +1,41 @@
+h1 {
+  font-size: 20px;
+}
+
+.closeCourse {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.rate {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 7px;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+.course:hover {
+  color: #143D59;
+  background-color: rgba(16, 55, 82, 0.103);
+
+}
+
+.course:active {
+  color: #F5B41A;
+  background-color: #143D59;
+}
+
+.iconCourse {
+  width: 20px;
+}

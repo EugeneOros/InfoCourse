@@ -1,0 +1,6 @@
+<div class="course" (click)="showDetails()">
+  <img src="{{course.imgPath}}" class='iconCourse' alt="">
+  <h1 style='padding: 10px;'>{{course.name}}</h1>
+  <img *ngIf='isAdmin()' src=" ../../../assets/img/cancel.png" style="width: 15px; height: 15px;" alt=""
+    class="closeCourse" (click)="remove($event)">
+</div>

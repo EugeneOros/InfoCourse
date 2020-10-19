@@ -1,0 +1,27 @@
+<div>
+  <div class="row">
+    <section class="col-10 offset-1 col-md-8 offset-md-2 ">
+      <div class="form-group " id="formGroup">
+        <input type="text" class="form-control" placeholder="Search by Name" [(ngModel)]="searchTerm" />
+        <input type="text" class="form-control" placeholder="Search by ECTS" [(ngModel)]="searchTermECTS" />
+        <input type="text" class="form-control" placeholder="Search by Semester" [(ngModel)]="searchTermSemester" />
+        <input type="text" class="form-control" placeholder="Search by Rate" [(ngModel)]="searchTermRate" />
+      </div>
+    </section>
+  </div>
+  <div class="row">
+    <div class="col-10 offset-1  col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+      <ul class="list-group courseList shadow-none" style="list-style-type:none "
+        *ngFor="let course of courses  | searchPipe:searchTerm | searchPipeECTS:searchTermECTS | searchPipeSemester:searchTermSemester | searchPipeRate:searchTermRate, even as isEven"
+        [routerLink]="['/components/course-details/', course.id]">
+        <li [ngClass]="{'oddtest' : isEven, 'eventest' : !isEven}"
+          class=" list-group-item  list-group-item-action courseItem">
+          <app-course (removeCourse)="removeCourseFromList($event)" [course]='course'>
+          </app-course>
+        </li>
+      </ul>
+      <br>
+      <app-add-course *ngIf="isAdmin()"></app-add-course>
+    </div>
+  </div>
+</div>

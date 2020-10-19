@@ -1,0 +1,37 @@
+.navBar {
+  color: #F5B41A;
+  background-color: #143D59;
+  border-bottom: 3px solid #F5B41A;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.navBrand {
+  font-size: 35px;
+  color: #F5B41A;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("../../../assets/img/toggler.png");
+}
+
+.navToggler {
+  color: #F5B41A;
+  border-color: #F5B41A;
+}
+
+.navItem {
+  color: #F5B41A important !;
+}
+
+#navBar {
+  margin-left: auto;
+}
+
+.loggedInUser {
+  margin-right: 20px;
+}
+
+.verticalLine {
+  border-right: 1px solid #999;
+}

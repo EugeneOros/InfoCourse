@@ -1,0 +1,8 @@
+<div>
+  <img #firstStar src="../../../assets/img/starFull.png" alt="" class="star" (click)="setStars(1)">
+  <img #secondStar src="../../../assets/img/starFull.png" alt="" class="star" (click)="setStars(2)">
+  <img #thirdStar src="../../../assets/img/starHalf.png" alt="" class="star" (click)="setStars(3)">
+  <img #fourthStar src="../../../assets/img/starEmpty.png" alt="" class="star" (click)="setStars(4)">
+  <img #fifthStar src="../../../assets/img/starEmpty.png" alt="" class="star" (click)="setStars(5)">
+  <p *ngIf="userRated()" class="ratedText">you rated</p>
+</div>
